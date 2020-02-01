@@ -1,0 +1,32 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "Back-End Team",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "node index.js",
+    "test": "cross-env DB_ENV=testing jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Block-Club-Calendar/Back-End.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Block-Club-Calendar/Back-End/issues"
+  },
+  "homepage": "https://github.com/Block-Club-Calendar/Back-End#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-session-knex": "^1.5.0",
+    "cross-env": "^7.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "jest": "^25.1.0",
+    "knex": "^0.20.8",
+    "sqlite3": "^4.1.1",
+    "supertest": "^4.0.2"
+  }
+}
