@@ -3,6 +3,10 @@ const session = require('express-session');
 const KnexSessionStore = require('connect-session-knex');
 const dbConnection = require('../data/dbConfig.js');
 
+const authRouter = require('../auth/auth-router.js');
+const eventsRouter = require('../events/events-router.js');
+const usersRouter = require('../users/users-router.js');
+
 const server = express();
 
 const sessionConfig = {
@@ -26,5 +30,9 @@ const sessionConfig = {
 
 server.use(session(sessionConfig));
 server.use(express.json());
+
+server.use('/api/users', usersRouter);
+server.use('/api/events', eventsRouter);
+server.use('/api/auth', authRouter);
 
 module.exports = server;
