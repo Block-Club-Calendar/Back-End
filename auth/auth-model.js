@@ -4,7 +4,7 @@ module.exports = {
     findEventById,
     addEvent,
     updateEvent,
-    deleteEvent
+    removeEvent
 }
 
 function findEventById(id){
@@ -19,6 +19,6 @@ function updateEvent(id, event){
     return db('events').where('id', Number(id)).update(event);
 }
 
-function deleteEvent(id){
+function removeEvent(id){
     return db('events').where('id', Number(id)).del();
 }
