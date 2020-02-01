@@ -13,3 +13,4 @@ function addUser(user){
     return db('users').insert(user, 'id').then(([id]) => {return findUserById(id)})
 }
 
+//insert user_id and event_id to users_events
