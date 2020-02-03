@@ -1,5 +1,5 @@
 
-exports.up = function(knex) {
+exports.up = async (knex, Promise) => {
   return knex.schema.createTable('users', tbl => {
       tbl.increments();
       tbl.string('username').unique().notNullable();
@@ -39,7 +39,7 @@ exports.up = function(knex) {
   })
 };
 
-exports.down = function(knex) {
+exports.down = async (knex, Promise) => {
   return knex.schema
   .dropTableIfExists('users_events')
   .dropTableIfExists('events')

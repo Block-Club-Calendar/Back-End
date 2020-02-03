@@ -19,11 +19,11 @@ function addEvent(event){
 }
 
 function updateEvent(id, event){
-    return db('events').where('id', Number(id)).update(event);
+    return db('events').where({id}).update(event);
 }
 
 function removeEvent(id){
-    return db('events').where('id', Number(id)).del();
+    return db('events').where({id}).del();
 }
 
 function addUserToEvent(user){

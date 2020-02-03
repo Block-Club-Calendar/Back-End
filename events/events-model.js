@@ -7,7 +7,7 @@ module.exports = {
 }
 
 function attendanceCount(id){
-    return db('users_events').count('user_id').where('event_id', id)
+    return db('users_events').count('user_id as attendees').where('event_id', id)
 }
 
 function findEvents() {

@@ -25,7 +25,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-router.get('/attendance/:id', (req, res) => {
+router.get('/:id/rsvp', (req, res) => {
     Event.findEventById(req.params.id)
     .then(event => {
         if(event.length > 0) {
@@ -38,7 +38,7 @@ router.get('/attendance/:id', (req, res) => {
         }
     })
     .catch(err => {
-        res.status(500).json({message: 'Error retrieving attendance'})
+        res.status(500).json({message: 'Error retrieving event'})
     })
 })
 
