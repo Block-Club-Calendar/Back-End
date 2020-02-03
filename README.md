@@ -34,7 +34,7 @@
 | POST | /api/events/auth/ | addEvent | Adds event | _Authorization Required_ **Expects** `findEventById` JSON object _without id_. **Returns** `findEventById` object|
 | PUT | /api/events/auth/:id | updateEvent | Edits existing event at `id` | _Authorization Required_ **Expects** `findEventById` JSON object **Returns** an object: `{"message": "Event was successfully updated"}`
 | DELETE | /api/events/auth/:id | removeEvent | Deletes event at `id` | **Returns** an object: `{"message": "Event has been deleted"}` |
-| GET | /api/events/auth/:id | _N/A_ | Adds user to attendance list of event at `id` |_Authorization Required_ **Returns** an object: `{"message": "user was added to event}`|
+| POST | /api/events/auth/:id | _N/A_ | Adds user to attendance list of event at `id` |_Authorization Required_ **Returns** an object: `{"message": "user was added to event}`|
 
 
 #### `findEventById` object
