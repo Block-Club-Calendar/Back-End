@@ -1,4 +1,6 @@
 const express = require('express');
+const cors = require('cors')
+const helmet = require('helmet')
 const session = require('express-session');
 const KnexSessionStore = require('connect-session-knex')(session);
 const dbConnection = require('../data/dbConfig.js');
@@ -30,6 +32,8 @@ const sessionConfig = {
         })
 }
 
+server.use(cors())
+server.use(helmet())
 server.use(session(sessionConfig));
 server.use(express.json());
 

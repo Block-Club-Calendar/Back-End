@@ -40,7 +40,7 @@ router.delete('/:id', (req, res) => {
     })
 })
 
-router.get('/:id', (req, res) => {
+router.post('/:id', (req, res) => {
     const user = req.session.userId;
     const id = req.params.id;
     req.body = {user_id: user, event_id: id} 
