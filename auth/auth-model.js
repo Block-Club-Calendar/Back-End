@@ -6,6 +6,7 @@ module.exports = {
     addEvent,
     updateEvent,
     removeEvent,
+    removeUserEvent,
     addUserToEvent,
     findAttendance
 }
@@ -24,6 +25,10 @@ function updateEvent(id, event){
 
 function removeEvent(id){
     return db('events').where({id}).del();
+}
+
+function removeUserEvent(id){
+    return db('users_events').where('event_id', id).del();
 }
 
 function addUserToEvent(user){
