@@ -42,7 +42,7 @@
 {
     "id": #, not required
     "eventTitle": "", required string
-    "geolocation": "", required string
+    "geolocation": "", required string (lat, lon)
     "eventDescription": "", required text
     "eventStart": "YYYY-MM-DD HH:mm", required datetime
     "eventEnd": "YYYY-MM-DD HH:mm", required datetime

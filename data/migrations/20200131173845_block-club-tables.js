@@ -23,14 +23,12 @@ exports.up = async (knex, Promise) => {
   .createTable('users_events', tbl => {
       tbl.integer('user_id')
       .unsigned()
-      .notNullable()
       .references('id')
       .inTable('users')
       .onUpdate('CASCADE')
       .onDelete('CASCADE');
       tbl.integer('event_id')
       .unsigned()
-      .notNullable()
       .references('id')
       .inTable('events')
       .onUpdate('CASCADE')
